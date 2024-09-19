@@ -1,0 +1,3 @@
+[submodule "web-service/master/master-rust/__submodules__/webrtc-vad"]
+	path = web-service/master/master-rust/__submodules__/webrtc-vad
+	url = https://github.com/kaegi/webrtc-vad
