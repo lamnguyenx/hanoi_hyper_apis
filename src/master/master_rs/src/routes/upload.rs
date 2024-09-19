@@ -1,7 +1,18 @@
+// TRAITS
 use tokio::io::AsyncWriteExt;
 
+// GLOBAL
+type ArcSemp = std::sync::Arc<tokio::sync::Semaphore>;
+type Ext<T> = axum::extract::Extension<T>;
+
+// FUNCTIONS
 #[axum::debug_handler]
-pub async fn upload(multipart: axum::extract::Multipart) -> impl axum::response::IntoResponse {
+pub async fn upload(
+    sync_arc_ext: Ext<ArcSemp>,
+    multipart: axum::extract::Multipart,
+) -> impl axum::response::IntoResponse {
+    let _permit = sync_arc_ext.0.acquire().await.unwrap();
+
     match _upload(multipart).await {
         Ok(result) => result,
         Err(e) => axum::Json(serde_json::json!({
