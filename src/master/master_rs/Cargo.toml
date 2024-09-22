@@ -20,4 +20,5 @@ tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 uuid = { version = "1.10.0", features = ["v4", "serde"] }
 webrtc-vad = "0.4.0"
 utils_rs = { path = "../../utils/utils_rs"}
+whisper-rs = "0.11.1"
 
