@@ -25,3 +25,4 @@ fi
 
 SWD="$(dirname "$(realpath "$BASH_SOURCE")")"
 export PATH=$SWD/bin:$PATH
+export FFMPEG_PKG_CONFIG_PATH="/Volumes/SONNY/rsmpeg/tmp/ffmpeg_build/lib/pkgconfig"

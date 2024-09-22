@@ -1,13 +1,11 @@
 mod routes;
-mod utils;
-
 
 // OPERATIONS
 #[tokio::main]
 async fn main() {
     // basics
-    let host = utils::get_env!("MASTER_HOST", "0.0.0.0");
-    let port = 8080;
+    let host = utils_rs::get_env!("MASTER_HOST", "0.0.0.0");
+    let port = utils_rs::get_env!("MASTER_PORT", "8080").parse::<i32>().unwrap();
     let addr = format!("{}:{}", host, port);
     let max_workers = 4_usize;
 

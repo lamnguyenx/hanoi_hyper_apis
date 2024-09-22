@@ -2,5 +2,7 @@
 
 resolver = "2"
 members = [
-    "src/master/master_rs"
+    "src/master/master_rs",
+    "src/test/test_rs",
+    "src/utils/utils_rs"
 ]

@@ -8,6 +8,7 @@ anyhow = "1.0.89"
 axum = { version = "0.7.5", features = ["multipart", "macros"] }
 chrono = { version = "0.4.38", features = ["serde"] }
 default-args = "1.0.0"
+ffprobe = "0.4.0"
 lazy_static = "1.5.0"
 serde = { version = "1.0.210", features = ["derive"] }
 serde_json = { version = "1.0.128", features = ["float_roundtrip"] }
@@ -18,4 +19,5 @@ tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 uuid = { version = "1.10.0", features = ["v4", "serde"] }
 webrtc-vad = "0.4.0"
+utils_rs = { path = "../../utils/utils_rs"}
 

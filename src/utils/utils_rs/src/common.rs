@@ -1,4 +1,5 @@
 // macros
+#[macro_export] 
 macro_rules! get_env {
     ($var:expr, $default:expr) => {
         std::env::var($var).unwrap_or_else(|_| $default.to_string())
@@ -11,8 +12,6 @@ macro_rules! get_env {
             .unwrap_or($default)
     };
 }
-
-pub(crate) use get_env;
 
 // functions
 pub fn round_dur(dur: f32, ndigits: Option<usize>) -> f32 {
